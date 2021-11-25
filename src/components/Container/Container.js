@@ -9,9 +9,5 @@ export const Container = ({children}) =>{
             {children}
 
         </section>
-
-
-
     )
-
 }
