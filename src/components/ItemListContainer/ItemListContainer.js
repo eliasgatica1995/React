@@ -5,9 +5,10 @@ import { ItemList } from "../ItemList/ItemList"
 
 export const ItemListContainer = ({greeting}) =>{
     const [items,setItems] = useState([])
-        
+    const [loading, setLoading] = useState(false) 
       
         useEffect(() => {
+            setLoading(true)
             pedirDatos()
                 .then((resp) =>{
                     setItems(resp)
@@ -16,7 +17,7 @@ export const ItemListContainer = ({greeting}) =>{
                     console.log(err)
                 })
                 .finally(()=>{
-                    console.log("Peticion finalizada")
+                   setLoading(false)
                 })
         },[])
 
@@ -26,9 +27,10 @@ export const ItemListContainer = ({greeting}) =>{
                
                 <div className="container px-5 py-6 mx-auto">
                     <div className="flex flex-wrap sm:-m-4 -mx-8 -mb-10">
-                    {   items?
-                    <ItemList items={items}/>                      
-                    : <h3>Cargando..</h3>
+                    {   loading
+                    ? <h3>Cargando..</h3> 
+                    :<ItemList items={items}/>                      
+                    
 
                     }
                     </div>
