@@ -10,6 +10,7 @@ import {FyH}  from './components/Clicker/FyH.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {ItemCount} from './components/ItemCount/ItemCount'
 import {ItemListContainer} from './components/ItemListContainer/ItemListContainer'
+import {PostApi} from './components/PostApi/PostApi'
 function App() {
   const saludo1 = "Hola Item List Container";
 
@@ -25,7 +26,7 @@ function App() {
         {mostrar && <Clicker/>}
       
         <ItemCount stock={20}/>
-
+        <PostApi/>
       </Container>
      
       <Footer/>
