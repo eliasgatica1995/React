@@ -21,12 +21,8 @@ function App() {
       <Container>
         <FyH/>
         <ItemListContainer saludo={saludo1}/>
-      
-        <button onClick={()=>{setMostrar(!mostrar)}}>mostrar</button>
-        {mostrar && <Clicker/>}
-      
-        <ItemCount stock={20}/>
-        <PostApi/>
+     
+       
       </Container>
      
       <Footer/>
