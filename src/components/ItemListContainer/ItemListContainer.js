@@ -21,14 +21,19 @@ export const ItemListContainer = ({greeting}) =>{
         },[])
 
         return(
-            <div>
-                <h2>{greeting}</h2>
-                <hr/>
-            {   items?
-                <ItemList items={items}/>                      
-                : <h3>Cargando</h3>
+        
+            <section className="text-gray-600 body-font">
+               
+                <div className="container px-5 py-6 mx-auto">
+                    <div className="flex flex-wrap sm:-m-4 -mx-8 -mb-10">
+                    {   items?
+                    <ItemList items={items}/>                      
+                    : <h3>Cargando..</h3>
 
-            }
-            </div>
+                    }
+                    </div>
+                </div>   
+            
+        </section>
         )
 }
