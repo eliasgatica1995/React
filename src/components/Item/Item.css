@@ -1,0 +1,10 @@
+.contenedorImagen{
+    height: 250px;
+    display: flex;
+}
+.contenedorImagen img {
+    object-fit: contain;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}

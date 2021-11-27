@@ -4,10 +4,8 @@ export const ItemList = ({items=[]}) =>{
 
         return (
 
-            <section className="text-gray-600 body-font">
-               
-                <div className="container px-5 py-6 mx-auto">
-                    <div className="flex flex-wrap sm:-m-4 -mx-8 -mb-10">
+           
+                   <div className="container row my-5 mx-auto">
                         {items.map((item,index) => 
                         <Item 
                             key={index} 
@@ -18,8 +16,8 @@ export const ItemList = ({items=[]}) =>{
 
                         />)}
                     </div>
-                </div>   
+                 
                 
-            </section>
+        
         )
 }

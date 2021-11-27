@@ -23,10 +23,8 @@ export const ItemListContainer = ({greeting}) =>{
 
         return(
         
-            <section className="text-gray-600 body-font">
-               
-                <div className="container px-5 py-6 mx-auto">
-                    <div className="flex flex-wrap sm:-m-4 -mx-8 -mb-10">
+          
+                    <div>
                     {   loading
                     ? <h3>Cargando..</h3> 
                     :<ItemList items={items}/>                      
@@ -34,8 +32,8 @@ export const ItemListContainer = ({greeting}) =>{
 
                     }
                     </div>
-                </div>   
             
-        </section>
+            
+     
         )
 }
