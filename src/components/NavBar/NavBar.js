@@ -17,7 +17,7 @@ return  <header className="navBar">
                 </nav>
             
 
-                <Link to="/cart" style={{ textDecoration: 'none', color: '#FFF'}}><CartWidget/></Link>
+                <Link to="/cart" style={{ textDecoration: 'none', color: '#FFF'}} className="iconoCarro"><CartWidget/></Link>
               
         </header>
 }
