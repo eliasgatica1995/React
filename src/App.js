@@ -33,9 +33,7 @@ function App() {
                 <Route path="*" element={ <Navigate to="/"/> }/>
     
             </Routes>
-            
-                <FyH/>
-              
+           
                   
         </Container>
           
