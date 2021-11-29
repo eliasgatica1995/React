@@ -4,14 +4,15 @@ export const ItemList = ({items=[]}) =>{
 
         return (
 
-           
                    <div className="container row my-5 mx-auto">
                         {items.map((item,index) => 
                         <Item 
-                            key={index} 
+                            key={index}
+                            id={item.id} 
                             title={item.title}
                             price={item.price}
                             image = {item.image}
+                            category={item.category}
                             description={item.description}
 
                         />)}

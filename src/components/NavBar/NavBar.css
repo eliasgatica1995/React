@@ -2,10 +2,12 @@
     display: flex;
     background-color: black;
     align-items: center;
+    text-decoration: none;
   }
   .navBar ul {
     display: flex;
     list-style: none;
+    text-decoration: none;
   }
   .navBar ul li,.navBar nav{
    color: white;
@@ -14,6 +16,7 @@
    text-align: center;
    padding-left:30px;
    padding-right:30px;
+   text-decoration: none;
   }
   h1{
     color: white;
