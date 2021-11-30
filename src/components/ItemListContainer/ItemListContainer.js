@@ -28,19 +28,12 @@ export const ItemListContainer = () =>{
                 })
         },[categoryId])
 
-        return(
-        
-          
+        return(         
                     <div>
                     {   loading
                     ? <h3>Cargando..</h3> 
                     :<ItemList items={items}/>                      
-                    
-
                     }
                     </div>
-            
-            
-     
         )
 }
