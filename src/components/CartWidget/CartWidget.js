@@ -5,10 +5,14 @@ import './CartWidget.css'
 
 export const CartWidget = () => {
     const {totalItems} = useContext(CartContext)
-    return (
+    
+    if (totalItems() !== 0){
+        return (
             <div className="cartWidget">
-                <MdShoppingCart/>
-                <span> {totalItems()} </span>
+                    <MdShoppingCart/>
+                    <span> {totalItems()} </span>
             </div>
-    )
+     )}else
+            return(<div></div>)
+   
 }
