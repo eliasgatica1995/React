@@ -1,6 +1,7 @@
+import { collection,doc,getDoc } from 'firebase/firestore/lite'
 import React, { useEffect,useState } from 'react'
 import { useParams } from 'react-router'
-import { pedirItem } from '../helper/pedirDatos'
+import { db } from '../../firebase/config'
 import { ItemDetail } from '../ItemDetail/ItemDetail'
 
 export const ItemDetailContainer = () => {
@@ -10,12 +11,20 @@ export const ItemDetailContainer = () => {
     const {itemId} = useParams()
     useEffect(() => {
         setLoading(true)
-        pedirItem( Number(itemId))
-        .then(resp => setItem(resp))
-        .finally(() => {
-            setLoading(false)
-        })
-    }, [])
+
+        const referenciaProd = collection(db,'productos')
+        const documentoR = doc(referenciaProd,itemId)
+
+        getDoc(documentoR)
+            .then((docR)=>{
+                setItem({
+                    id:docR.id,
+                    ...docR.data()
+                })
+            })
+            .finally(()=>{setLoading(false)})
+
+    }, [itemId])
 
     return (
         <div>

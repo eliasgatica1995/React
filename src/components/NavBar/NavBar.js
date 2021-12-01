@@ -11,8 +11,9 @@ return  <header className="navBar">
                 <nav>
                     <ul>
                         <li><Link to="/category/electronics" style={{ textDecoration: 'none', color: '#FFF' }}>Electronics</Link></li>
+                        <li><Link to="/category/men's-clothing" style={{ textDecoration: 'none', color: '#FFF' }}>Ropa de hombre</Link></li>
+                        <li><Link to="/category/women's-clothing" style={{ textDecoration: 'none', color: '#FFF' }}>Ropa de mujer</Link></li>
                         <li><Link to="/cart" style={{ textDecoration: 'none', color: '#FFF' }}>Cart</Link></li>
-                        <li><Link to="/detail" style={{ textDecoration: 'none', color: '#FFF' }}>Detail</Link></li>
                     </ul>
                 </nav>
             
