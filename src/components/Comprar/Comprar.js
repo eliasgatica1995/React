@@ -13,6 +13,7 @@ export const Comprar = () => {
   const [values, setValues] = useState({
     nombre: '',
     email: '',
+    emailRep:'',
     telefono:''
   
 })
@@ -22,7 +23,7 @@ export const Comprar = () => {
     const ordenDeCompra ={
         comprador: compradorDatos,
         items: cart,
-        totalC:totalCompra(),
+        totalCompra:totalCompra(),
         fecha: Timestamp.fromDate(new Date())
     }
 
@@ -50,10 +51,12 @@ export const Comprar = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-
+  
     if (values.nombre.length > 5 && values.email.length > 10 ){
         if ((values.nombre.length <= 30 && values.email.length <= 40 ))
-        generarOrden(values)
+            if (values.email === values.emailRep)
+                    generarOrden(values)
+            else{alert("El email debe coincidir")}
     } else {
         alert("Campos no válidos")
     }
@@ -94,6 +97,14 @@ export const Comprar = () => {
                                     name="email"
                                     className="form-control my-2 mx-auto"
                                     placeholder="Email"
+                                    type="email"
+                                />
+                                <input
+                                    value={values.emailRep}
+                                    onChange={handleInputChange}
+                                    name="emailRep"
+                                    className="form-control my-2 mx-auto"
+                                    placeholder="Por favor repita su Email"
                                     type="email"
                                 />
 
