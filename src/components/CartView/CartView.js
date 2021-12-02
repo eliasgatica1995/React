@@ -19,7 +19,7 @@ export const CartView = () => {
                                         <div className="p-2">
                                     </div>
                                         <div className="d-flex flex-row justify-content-between align-items-center p-2 bg-white mt-4 px-3 rounded">
-                                            <div className="mr-1"><img className="rounded" src={elemento.imagen} width="40"/></div>
+                                            <div className="mr-1"><img className="rounded" src={elemento.imagen} width="40" alt={elemento.nombre}/></div>
                                             <div className="d-flex flex-column align-items-center product-details"><span className="font-weight-bold">{elemento.nombre}</span>
                                             </div>
                                             <div className="d-flex flex-row align-items-center qty"><i className="fa fa-minus text-danger"></i>
@@ -41,7 +41,7 @@ export const CartView = () => {
             <hr/>
             <h4>Total: ${totalCompra()}</h4>
             <button onClick={vaciarCarro} className={"btn btn-danger"}>Vaciar carrito</button>
-            <Link to="/checkout" className="btn btn-success mx-2">Terminar mi compra</Link>
+            <Link to="/compra" className="btn btn-success mx-2">Terminar mi compra</Link>
         
         </div>
 

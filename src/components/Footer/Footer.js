@@ -7,7 +7,7 @@ export const Footer = () => {
     return (
             <footer className ="footer">
                 <ul>
-                    <li>Retrogames</li>
+                    <li>Open Market</li>
                     <li>Elias Gatica</li>
                     <li>+54123456</li>
                 </ul>

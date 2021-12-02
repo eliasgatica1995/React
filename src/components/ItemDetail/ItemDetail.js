@@ -32,14 +32,14 @@ export const ItemDetail = ({item}) => {
 
 
     return (
-        <div className="col-3 m-2 card-body ">
+        <div className="col-8 m-2 card-body mx-auto">
                             <div className="shadow-lg bg-gray-100 p-6 rounded-lg h-100 d-flex flex-column ">
                                 <div className="container-sm contenedorImagen"> 
-                                    <img className="object-contain bg-placeholder h-20 rounded w-50 mx-auto d-block mb-6 d-flex flex-wrap align-items-center" src={item.image} alt={item.title}/>
+                                    <img className="object-contain bg-placeholder h-20 rounded w-75 mx-auto d-block mb-6 mt-6  d-flex flex-wrap align-items-center" src={item.image} alt={item.title}/>
                                </div>
                                 <h6>{item.title}</h6>
                                 <h6>{item.price}</h6>
-                                <p>{item.description}</p>
+                                <p className="mx-3">{item.description}</p>
                                     {   !existeEnCarro(item.id)
                                         ? <ItemCount increment={increment} decrement={decrement} onAdd={agregar} counter={counter}/>
                                         :<Link to="/cart" className="btn btn-success mt-auto mx-auto mb-3">Terminar compra</Link>

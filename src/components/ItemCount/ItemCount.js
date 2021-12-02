@@ -1,4 +1,4 @@
-import React, {useEffect,useState} from "react";
+import React from "react";
 
 export const ItemCount = ({increment,decrement,onAdd, counter}) => {
 
@@ -13,8 +13,5 @@ export const ItemCount = ({increment,decrement,onAdd, counter}) => {
             </div>
 
         </div>
-       
-     
-
          )
 }

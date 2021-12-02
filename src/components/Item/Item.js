@@ -11,7 +11,7 @@ export const Item = (item) =>{
                 <div className="container-sm contenedorImagen"> 
                 <img className="object-contain bg-placeholder h-20 rounded w-50 mx-auto d-block mb-6 d-flex flex-wrap align-items-center" src={item.image} alt={item.title}/>
                 </div>
-                <p>{item.title}</p>
+                <p className="mx-2">{item.title}</p>
                 <p>Precio: {item.price}</p>
                 <p>Categoría: {item.category}</p>
                 <Link to={`/detail/${item.id}`} type="button" className="btn btn-lg btn-block btn-outline-primary mt-auto mx-auto mb-3">Ver más</Link>
