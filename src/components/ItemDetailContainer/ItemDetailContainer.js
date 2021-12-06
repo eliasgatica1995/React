@@ -3,6 +3,7 @@ import React, { useEffect,useState } from 'react'
 import { useParams } from 'react-router'
 import { db } from '../../firebase/config'
 import { ItemDetail } from '../ItemDetail/ItemDetail'
+import { Loader } from '../Loader/Loader'
 
 export const ItemDetailContainer = () => {
     const [item, setItem] = useState(null)
@@ -29,7 +30,7 @@ export const ItemDetailContainer = () => {
     return (
         <div>
         {   loading
-                    ? <h2>Cargando...</h2>
+                    ? <h3><Loader/></h3>
                     : item && <ItemDetail item={item}/>
          }
         </div>
